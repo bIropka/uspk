@@ -61,12 +61,11 @@ $(document).ready(function () {
             }
         });
     });
-    
+
 
     $('.form-submit').click(function() {
         $(this).parents('form').find('.form-field:invalid').addClass('invalid-field');
-        $(this).parents('form').find('.form-field:valid').addClass('valid-field');
-        $(this).parents('form').find('.no-checked').removeClass('valid-field invalid-field');
+        $(this).parents('form').find('.no-checked').removeClass('invalid-field');
     });
 
     $('.to-order').click(function () {
