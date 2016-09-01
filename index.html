@@ -458,15 +458,15 @@
 
         </div>
 
-        <form action="#">
+        <form action="mail-order.php">
 
             <p class="title">Оставляйте заявку</p>
 
             <label class="form-field-wrap">Ваше имя:<input type="text" id="order-name" name="order-name"  pattern="^[А-Яа-я]+$" class="form-field" required/></label>
 
-            <label class="form-field-wrap">Email:<input type="text" id="order-email" name="order-name"  pattern="^[А-Яа-я]+$" class="form-field" required/></label>
+            <label class="form-field-wrap">Email:<input type="email" id="order-email" name="order-name"  pattern="^[А-Яа-я]+$" class="form-field" required/></label>
 
-            <label class="form-field-wrap">Номер телефона:<input type="text" id="order-tel" name="order-name"  pattern="^[А-Яа-я]+$" class="form-field" required/></label>
+            <label class="form-field-wrap">Номер телефона:<input type="tel" id="order-tel" name="order-name"  pattern="^[А-Яа-я]+$" class="form-field" required/></label>
 
             <input type="checkbox" id="order-checkbox" name="order-checkbox" class="custom-checkbox" required/>
             <label for="order-checkbox" class="custom-checkbox-wrap">Согласен на обработку и передачу персональных данных</label>
@@ -542,6 +542,20 @@
     </div>
 
 </footer>
+
+<div class="window-successful">
+    <div class="message-successful">
+        <p>Сообщение отправлено!</p>
+        <button>OK</button>
+    </div>
+</div>
+
+<div class="window-error">
+    <div class="message-error">
+        <p>Ваше сообщение не отправлено!<br>Попробуйте еще раз!</p>
+        <button>OK</button>
+    </div>
+</div>
 
 <script src="js/jquery-3.1.0.min.js"></script>
 <script src="js/validatr.min.js"></script>

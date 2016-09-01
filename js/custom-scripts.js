@@ -61,6 +61,7 @@ $(document).ready(function () {
             }
         });
     });
+    
 
     $('.form-submit').click(function() {
         $(this).parents('form').find('.form-field:invalid').addClass('invalid-field');
