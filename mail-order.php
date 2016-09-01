@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['order-email'])) {$email = $_POST['order-email'];}
     if (isset($_POST['formData'])) {$formData = $_POST['formData'];}
 
-    $to = "biropka@gmail.com"; /*Укажите адрес, на который должно приходить письмо*/
+    $to = "tleugazin@gmail.com"; /*Укажите адрес, на который должно приходить письмо*/
     $sendfrom   = "ultramaxx"; /*Укажите адрес, с которого будет приходить письмо, можно не настоящий, нужно для формирования заголовка письма*/
     $headers  = "From: " . strip_tags($sendfrom) . "\r\n";
     $headers .= "Reply-To: ". strip_tags($sendfrom) . "\r\n";
