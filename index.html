@@ -52,18 +52,18 @@
     <div class="wrapper">
 
         <ul>
-            <li>Грузоперевозки фурами от 20 тонн</li>
-            <li>Перевозка негабаритных грузов</li>
-            <li>Перевозки рефрижераторами</li>
+            <li>Грузоперевозки<br> фурами от 20 тонн</li>
+            <li>Перевозка<br> негабаритных грузов</li>
+            <li>Перевозки<br> рефрижераторами</li>
         </ul>
 
     </div>
 
 </div>
 
-<div class="wrapper">
+<div class="our-cars">
 
-    <div class="our-cars">
+    <div class="wrapper">
 
         <h2>Наш автопарк</h2>
 
@@ -148,23 +148,27 @@
 
 </div>
 
-<div class="wrapper">
+<div class="gps">
 
-    <div class="gps">
+    <div class="wrapper">
 
-        <h2>Все машины оборудованы GPS датчиками</h2>
+        <div class="gps-info">
 
-        <div class="image-wrap">
+            <h2>Все машины оборудованы GPS датчиками</h2>
+
+            <div class="image-wrap icon-map">
+                <img src="source/images/icon-map.png" alt="icon-map">
+            </div>
+
+            <p>
+                Вы сможете всегда отслеживать груз в режиме онлайн + круглосуточный персональный логист
+            </p>
+
+        </div>
+
+        <div class="image-wrap image-map">
             <img src="source/images/image-map.jpg" alt="map">
         </div>
-
-        <div class="image-wrap">
-            <img src="source/images/icon-map.png" alt="icon-map">
-        </div>
-
-        <p>
-            Вы сможете всегда отслеживать груз в режиме онлайн + круглосуточный персональный логист
-        </p>
 
     </div>
 
@@ -232,9 +236,9 @@
 
 </div>
 
-<div class="wrapper">
+<div class="gratitude">
 
-    <div class="gratitude">
+    <div class="wrapper">
 
         <h2>Благодарности наших клиентов</h2>
 
@@ -258,6 +262,10 @@
             <li class="image-wrap">
                 <img src="source/images/image-gratitude-5.jpg" alt="grtitude">
             </li>
+
+            <li class="image-wrap">
+                <img src="source/images/image-gratitude-6.jpg" alt="grtitude">
+            </li>
         </ul>
 
         <p>
@@ -268,9 +276,9 @@
 
 </div>
 
-<div class="wrapper">
+<div class="managers">
 
-    <div class="managers">
+    <div class="wrapper">
 
         <h2>Команда</h2>
 
@@ -330,9 +338,9 @@
 
 </div>
 
-<div class="wrapper">
+<div class="logisticians">
 
-    <div class="logisticians">
+    <div class="wrapper">
 
         <h2>и еще логисты - основа любой транпортной компании</h2>
 
@@ -398,15 +406,45 @@
 
             </div>
 
+            <div class="slide">
+
+                <div class="image-wrap">
+                    <img src="source/images/photo-logistician-1.jpg" alt="logistician">
+                </div>
+
+                <p class="name">Елена Рыбалко</p>
+
+            </div>
+
+            <div class="slide">
+
+                <div class="image-wrap">
+                    <img src="source/images/photo-logistician-5.jpg" alt="logistician">
+                </div>
+
+                <p class="name">Мария Букина</p>
+
+            </div>
+
+            <div class="slide">
+
+                <div class="image-wrap">
+                    <img src="source/images/photo-logistician-6.jpg" alt="logistician">
+                </div>
+
+                <p class="name">Екатерина Мужева</p>
+
+            </div>
+
         </div>
 
     </div>
 
 </div>
 
-<div class="wrapper">
+<div class="contacts">
 
-    <div class="contacts">
+    <div class="wrapper">
 
         <div class="phone-block">
 
@@ -420,27 +458,24 @@
 
         </div>
 
+        <form action="#">
+
+            <p class="title">Оставляйте заявку</p>
+
+            <label class="form-field-wrap">Ваше имя:<input type="text" id="order-name" name="order-name"  pattern="^[А-Яа-я]+$" class="form-field" required/></label>
+
+            <label class="form-field-wrap">Email:<input type="text" id="order-email" name="order-name"  pattern="^[А-Яа-я]+$" class="form-field" required/></label>
+
+            <label class="form-field-wrap">Номер телефона:<input type="text" id="order-tel" name="order-name"  pattern="^[А-Яа-я]+$" class="form-field" required/></label>
+
+            <input type="checkbox" id="order-checkbox" name="order-checkbox" class="custom-checkbox" required/>
+            <label for="order-checkbox" class="custom-checkbox-wrap">Согласен на обработку и передачу персональных данных</label>
+
+            <button type="submit" class="order form-submit">Отправить заявку</button>
+
+        </form>
+
     </div>
-
-    <form action="#">
-
-        <p class="title"></p>
-
-        <label for="order-name" class="form-field-wrap">Ваше имя:</label>
-        <input type="text" id="order-name" name="order-name"  pattern="^[А-Яа-я]+$" class="form-field" required/>
-
-        <label for="order-email" class="form-field-wrap">Email:</label>
-        <input type="text" id="order-email" name="order-name"  pattern="^[А-Яа-я]+$" class="form-field" required/>
-
-        <label for="order-tel" class="form-field-wrap">Номер телефона:</label>
-        <input type="text" id="order-tel" name="order-name"  pattern="^[А-Яа-я]+$" class="form-field" required/>
-
-        <input type="checkbox" id="order-checkbox" name="order-checkbox" class="custom-checkbox" required/>
-        <label for="order-checkbox" class="custom-checkbox-wrap">Согласен на обработку и передачу персональных данных</label>
-
-        <button type="submit" class="form-submit">Отправить заявку</button>
-
-    </form>
 
 </div>
 
@@ -450,14 +485,6 @@
 
         <div class="markello">
             <a href="#">Разработка сайта</a>
-        </div>
-
-        <div class="copyrights">
-
-            <p>2016 © АО "Урало-Сибирская Промышленная Компания"</p>
-
-            <p>Все права на материалы сайта защищены</p>
-
         </div>
 
         <ul>
@@ -503,6 +530,14 @@
             </li>
 
         </ul>
+
+        <div class="copyrights">
+
+            <p>2016 © АО "Урало-Сибирская Промышленная Компания"</p>
+
+            <p>Все права на материалы сайта защищены</p>
+
+        </div>
 
     </div>
 

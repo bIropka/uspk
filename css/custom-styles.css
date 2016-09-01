@@ -90,12 +90,30 @@ h1 {
     font-family: "Proxima Nova Light", sans-serif;
     font-size: 2.1875em;
     color: #ffffff;
+    font-weight: 100;
+    line-height: 1.2;
 }
 h2 {
-
+    font-size: 1.5625em;
+    font-weight: 100;
+    line-height: 1.2;
 }
 h3 {
-
+    font-family: 'PTSans Bold', sans-serif;
+    font-size: 1.0625em;
+    font-weight: 100;
+}
+button {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    font-family: 'PTSans Bold', sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+    text-transform: uppercase;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 }
 .image-wrap {
     display: block;
@@ -103,10 +121,10 @@ h3 {
     position: relative;
     overflow: hidden;
 }
-img {
+.image-wrap img {
     display: block;
-    width: 100%;
-    height: auto;
+    height: 100%;
+    width: auto;
     position: absolute;
     top: 0;
     left: 0;
@@ -125,18 +143,6 @@ img {
     display: block;
     clear: both;
 }
-
-.form-field-wrap {
-
-}
-.form-field {
-
-}
-
-.form-field::-webkit-input-placeholder {}
-.form-field::-moz-placeholder {}
-.form-field:-moz-placeholder {}
-.form-field:-ms-input-placeholder {}
 
 .form-field:focus::-webkit-input-placeholder {color: transparent;}
 .form-field:focus::-moz-placeholder {color: transparent;}
@@ -158,14 +164,37 @@ img {
     background-size: auto 30%!important;
 }
 
+.custom-checkbox {
+    display: none;
+}
+.custom-checkbox-wrap {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0.8125em;
+    color: #bbbbbb;
+}
+.custom-checkbox-wrap:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #e1e1e1;
+    margin-right: 20px;
+}
+.custom-checkbox:checked + .custom-checkbox-wrap:before {
+    background: url('../source/images/icon-ok.png') no-repeat center;
+    background-size: cover;
+}
+
 /******************************
-********** header *************
+******** page styles **********
 ******************************/
 
 header[role='banner'] {
     background: transparent url('../source/images/background-header.jpg') no-repeat center;
-    background-size: cover;
-    border: 1px solid transparent;
+    background-size: cover, auto;
+    border-top: 1px solid transparent;
 }
 .logo {
     display: block;
@@ -201,11 +230,427 @@ header[role='banner'] {
     color: rgba(255, 255, 255, 1);
 }
 .header-banner {
-    padding: 5% 0 1%;
+    padding: 10% 0 11.5%;
     text-align: center;
 }
 .header-banner .tagline {
     font-size: 1.1875em;
     color: #ffffff;
-
+    margin: 1% 0 3%;
 }
+.callback {
+    background-color: #0065cd;
+}
+.callback:hover {
+    background-color: #005cbb;
+}
+.callback:active {
+    background-color: #007af8;
+}
+.order {
+    background-color: #ffa234;
+}
+.order:hover {
+    background-color: #ea9127;
+}
+.order:active {
+    background-color: #ffae4f;
+}
+
+.services {
+    background-color: #313233;
+    padding: 50px 0;
+}
+.services ul li {
+    display: block;
+    width: 33.333333%;
+    float: left;
+    padding-left: 180px;
+    color: #ffffff;
+    position: relative;
+}
+.services ul li:before {
+    content: '';
+    display: block;
+    width: 150px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+.services ul li:nth-child(1):before {
+    height: 59px;
+    background: transparent url('../source/images/icon-car-1.png') no-repeat center;
+    background-size: cover;
+}
+.services ul li:nth-child(2):before {
+    height: 83px;
+    background: transparent url('../source/images/icon-car-2.png') no-repeat center;
+    background-size: cover;
+}
+.services ul li:nth-child(3):before {
+    height: 77px;
+    background: transparent url('../source/images/icon-car-3.png') no-repeat center;
+    background-size: cover;
+}
+
+.our-cars, .digits {
+    padding: 4.6% 0;
+}
+.our-cars ul {
+    margin-top: 15px;
+}
+.our-cars ul li {
+    display: block;
+    width: 18%;
+    margin-right: 2.5%;
+    float: left;
+}
+.our-cars ul li:last-child {
+    margin-right: 0;
+}
+.our-cars .image-wrap {
+    padding-top: 77%;
+    margin-bottom: 11%;
+}
+.our-cars .image-wrap:before, .managers .image-wrap:before, .logisticians .image-wrap:before {
+    content: '';
+    display: block;
+    width: 30%;
+    height: 5px;
+    background-color: #ffa734;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -ms-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+    z-index: 1;
+}
+.our-cars .image-wrap:hover:before, .managers .image-wrap:hover:before, .logisticians .image-wrap:hover:before {
+    width: 100%;
+}
+.our-cars p {
+    font-size: 0.9375em;
+    margin-top: 10px;
+}
+.our-cars p span {
+    font-family: 'PTSans Bold', sans-serif;
+    font-size: 1.0625em;
+    color: #f79e2b;
+}
+
+.gps {
+    padding-bottom: 4.6%;
+}
+.gps-info {
+    width: 310px;
+    float: left;
+}
+.icon-map {
+    padding-top: 67.50788643533123%;
+}
+.image-map {
+    width: 775px;
+    height: 320px;
+    float: right;
+}
+.image-map:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #ffa734 50%, #0065cd 50%) 0 0;
+    background-size: 20% 100%;
+}
+.gps p {
+    font-size: 1.0625em;
+}
+
+.digits {
+    background: transparent url('../source/images/background-digits.jpg') no-repeat center;
+    background-size: cover;
+}
+.digits ul li {
+    display: block;
+    width: 25%;
+    float: left;
+    text-align: center;
+    position: relative;
+}
+.digits ul li:after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 150px;
+    background: linear-gradient(to bottom, #ffffff 2px, transparent 2px);
+    background-size: 100% 10%;
+    position: absolute;
+    top: 25%;
+    right: -1px;
+}
+.digits ul li:last-child:after {
+    display: none;
+}
+.digits .number {
+    font-family: "Proxima Nova Bold", sans-serif;
+    color: #ffa734;
+    font-size: 4.875em;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+.digits .title {
+    font-family: 'PTSans Bold', sans-serif;
+    color: #ffa734;
+    font-size: 0.9375em;
+    margin: 10px 0 30px;
+}
+.digits .text {
+    padding: 0 15%;
+    color: #ffffff;
+    font-size: 0.8125em;
+}
+
+.guarantee {
+    padding: 2% 0;
+    text-align: center;
+    background-color: #ffa734;
+}
+.guarantee p {
+    font-size: 1.5625em;
+}
+
+.gratitude {
+    padding: 3% 0;
+    text-align: center;
+}
+.gratitude ul {
+    margin: 3% 0;
+}
+.gratitude ul:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.gratitude ul li {
+    display: block;
+    float: left;
+    width: 15%;
+    padding-top: 18.70481927710843%;
+    margin-right: 2%;
+    border: 1px solid #e4e4e4;
+}
+.gratitude ul li:last-child {
+    margin-right: 0;
+}
+.gratitude p {
+    font-size: 0.9375em;
+}
+
+.managers {
+    padding: 1% 0;
+}
+.managers h2 {
+    margin-bottom: 2%;
+}
+.managers ul li {
+    display: block;
+    width: 23.5%;
+    margin-right: 2%;
+    float: left;
+}
+.managers ul li:last-child {
+    margin-right: 0;
+}
+.managers .image-wrap {
+    padding-top: 111.0714285714286%;
+}
+.managers .name {
+    font-size: 1.0625em;
+    margin: 20px 0 5px;
+}
+.managers .position {
+    font-size: 0.8125em;
+    color: #a7a7a7;
+}
+
+.logisticians {
+    padding: 1.5% 0 3%;
+}
+.logisticians h2 {
+    padding-left: 5px;
+    font-size: 0.9375em;
+    margin-bottom: 2%;
+}
+.slider-logisticians {
+    width: 100%;
+    position: relative;
+}
+.logisticians .slide {
+    margin: 0 5px;
+}
+.logisticians .slide:focus {
+    outline: none;
+}
+.logisticians .image-wrap {
+    padding-top:122.7777777777778%;
+}
+.slick-arrow {
+    display: block;
+    width: 35px;
+    height: 35px;
+    font-size: 0;
+    position: absolute;
+    top: 35%;
+    margin: auto;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+.slick-prev {
+    left: -50px;
+    background: #efefef url('../source/images/sprite-slider.png') no-repeat 0 center;
+    background-size: cover;
+}
+.slick-next {
+    right: -50px;
+    background: #efefef url('../source/images/sprite-slider.png') no-repeat -35px center;
+    background-size: cover;
+}
+.slick-prev:hover {
+    background: #0065cd url('../source/images/sprite-slider.png') no-repeat -70px center;
+    background-size: cover;
+}
+.slick-next:hover {
+    background: #0065cd url('../source/images/sprite-slider.png') no-repeat -105px center;
+    background-size: cover;
+}
+.logisticians .name {
+    font-size: 1.0625em;
+    margin-top: 20px;
+}
+
+.phone-block {
+    width: 380px;
+    height: 340px;
+    float: left;
+    background: #ffa734 url('../source/images/background-phone.png') no-repeat left bottom;
+    position: relative;
+    padding: 50px;
+}
+.phone-block:after {
+    content: '';
+    display: block;
+    width: 93%;
+    height: 90%;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    border: 2px solid #2b2b2b;
+}
+.phone-block .title {
+    font-size: 1.5625em;
+}
+.phone-block a {
+    font-family: "Proxima Nova Bold", sans-serif;
+    font-size: 2.1875em;
+}
+.phone-block a:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #2b2b2b;
+    margin: 15px 0 25px;
+}
+.phone-block .text {
+    font-size: 0.9375em;
+}
+
+.contacts form {
+    display: block;
+    width: 780px;
+    height: 340px;
+    padding: 50px 80px;
+    background: transparent url('../source/images/background-form.png') no-repeat center;
+    background-size: contain;
+    float: right;
+}
+.contacts form .title {
+    font-size: 1.5625em;
+    margin-bottom: 15px;
+}
+.contacts .form-field-wrap {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.contacts .form-field {
+    display: block;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #dedede;
+    margin-top: 15px;
+}
+.contacts .order {
+    display: block;
+    margin-top: 20px;
+}
+
+footer[role='contentinfo'] {
+    background-color: #313233;
+    padding: 3% 0;
+    margin-top: 50px;
+}
+.markello {
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+}
+.markello a {
+    color: #ffffff;
+    font-family: 'PTSans Bold', sans-serif;
+    font-size: 0.8125em;
+    vertical-align: middle;
+}
+.markello a:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 53px;
+    height: 18px;
+    background: transparent url('../source/images/markello-blue.png') no-repeat center;
+    background-size: cover;
+    margin-left: 20px;
+}
+.markello a:hover:after {
+    background: transparent url('../source/images/markello-red.png') no-repeat center;
+    background-size: cover;
+}
+footer ul {
+    width: 70%;
+    float: right;
+}
+footer ul li {
+    width: 32.5%;
+}
+footer ul li a, footer ul li p, footer .copyrights p {
+    color: #ffffff;
+    font-size: 0.8125em;
+}
+footer .copyrights p:last-child {
+    margin-top: 15px;
+    color: #4c4c4c;
+}
+
+
