@@ -81,6 +81,8 @@ $(document).ready(function () {
     });
     $('.message-successful button').click(function() {
         $('.window-successful').fadeOut();
+        $('.window-callback').fadeOut();
+
     });
     $('.window-error').click(function (event) {
         $target = $(event.target);
@@ -88,6 +90,7 @@ $(document).ready(function () {
     });
     $('.message-error button').click(function() {
         $('.window-error').fadeOut();
+        $('.window-callback').fadeOut();
     });
 
     $('input').on('focus', function() {
