@@ -56,9 +56,14 @@ $(document).ready(function () {
         });
     });
 
-
     $('.form-submit').click(function() {
         $(this).parents('form').find('.form-field:invalid').addClass('invalid-field');
+        if(document.getElementById('order-checkbox').checked) {
+            document.getElementById('order-checkbox').classList.remove('invalid-field');
+        } else {
+            document.getElementById('order-checkbox').classList.add('invalid-field');
+        }
+        $(this).parents('form').find('.custom-checkbox:invalid').addClass('invalid-field');
         $(this).parents('form').find('.no-checked').removeClass('invalid-field');
     });
 
@@ -88,6 +93,9 @@ $(document).ready(function () {
     $('input').on('focus', function() {
         $(this).removeClass('valid-field invalid-field');
     });
+    $('input[type="checkbox"]').on('change', function() {
+        $(this).removeClass('valid-field invalid-field');
+    });
 
     $('input[type="tel"]').mask("+7 ( 999 ) 999 - 99 - 99");
     $('input[type="tel"]').click(function() {
@@ -115,6 +123,59 @@ $(document).ready(function () {
                 }
             }
         ]
+    });
+
+    /*******************************
+     ******* digits  script ********
+     ******************************/
+    var show = true;
+    var countbox = ".digits";
+    $(window).on("scroll load resize", function() {
+
+        if (!show) return false;
+
+        var w_top = $(window).scrollTop();
+        var e_top = $(countbox).offset().top;
+
+        var w_height = $(window).height();
+        var d_height = $(document).height();
+
+        var e_height = $(countbox).outerHeight();
+
+        if (w_top + w_height * 0.8 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+
+            var space_separator_number_step = $.animateNumber.numberStepFactories.separator(' ');
+
+            $('#our-years').animateNumber(
+                {
+                    number: 6,
+                    numberStep: space_separator_number_step
+                }, 1000
+            );
+
+            $('#our-logisticians').animateNumber(
+                {
+                    number: 26,
+                    numberStep: space_separator_number_step
+                }, 1300
+            );
+
+            $('#our-clients').animateNumber(
+                {
+                    number: 248,
+                    numberStep: space_separator_number_step
+                }, 2000
+            );
+
+            $('#our-offices').animateNumber(
+                {
+                    number: 8,
+                    numberStep: space_separator_number_step
+                }, 1000
+            );
+
+            show = false;
+        }
     });
 
 });
