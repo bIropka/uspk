@@ -111,15 +111,33 @@ $(document).ready(function () {
         slidesToScroll: 1,
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 1366,
                 settings: {
-
+                    slidesToShow: 5
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 981,
                 settings: {
-
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 360,
+                settings: {
+                    slidesToShow: 1
                 }
             }
         ]
