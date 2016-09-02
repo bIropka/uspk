@@ -4,17 +4,6 @@ $(document).ready(function () {
      ******* init scripts *********
      ******************************/
 
-    $(document).click(function() {
-
-        $target = $(event.target);
-
-        if (!$target.closest($('.custom-select')).length){
-            $('.custom-select .current-value').removeClass('active');
-            $('.custom-select ul').slideUp();
-        }
-
-    });
-
     if ($(window).width() < '992'){
 
     } else {
@@ -33,6 +22,11 @@ $(document).ready(function () {
      ******* other scripts ********
      ******************************/
 
+    $('header .order').click(function(){
+        $('html, body').animate({scrollTop: $('#form-order').offset().top}, 800);
+        return false;
+    });
+
     $(function($) {
         $('form').validatr({
             showall: true,
@@ -43,7 +37,7 @@ $(document).ready(function () {
                 var formNm = $('#' + formID);
                 var scriptFile;
                 if (formID == 'form-order') scriptFile = 'mail-order.php';
-                if (formID == 'form-to-buy-now') scriptFile = 'mail-to-buy.php';
+                if (formID == 'form-callback') scriptFile = 'mail-callback.php';
                 $.ajax({
                     type: "POST",
                     url: scriptFile,
@@ -68,13 +62,13 @@ $(document).ready(function () {
         $(this).parents('form').find('.no-checked').removeClass('invalid-field');
     });
 
-    $('.to-order').click(function () {
-        $('.window-order').fadeIn();
+    $('.callback').click(function () {
+        $('.window-callback').fadeIn();
     });
-    $('.window-order').click(function (event) {
+    $('.window-callback').click(function (event) {
         $target = $(event.target);
-        if (!$target.closest($('.form-order')).length) $('.window-order').fadeOut();
-        if ($target.hasClass('close-marker')) $('.window-order').fadeOut();
+        if (!$target.closest($('#form-callback')).length) $('.window-callback').fadeOut();
+        if ($target.hasClass('close-marker')) $('.window-callback').fadeOut();
     });
     $('.window-successful').click(function (event) {
         $target = $(event.target);
